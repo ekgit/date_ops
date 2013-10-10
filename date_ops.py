@@ -81,6 +81,9 @@ def last_day(y,m=None):
         rv -= datetime.timedelta(1)
     return rv
 
+def endofweek(d,i=6):
+    return d + datetime.timedelta(abs(i - d.weekday()))
+
 def t(code,n):
     try:
         return eval(code)
